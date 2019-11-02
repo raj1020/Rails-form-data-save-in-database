@@ -1,0 +1,29 @@
+<%= form_with(model: @cook, local: true) do |form| %>
+    <div
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+    <div>
+        <%= form.label :phone %>
+        <%= form.text_field :phone %>
+    </div>
+    <div>
+        <%= form.label :address %>
+        <%= form.text_field :address %>
+    </div>
+    <div>
+        <%= form.label :email %>
+        <%= form.text_field :email %>
+    </div>
+    <div>
+        <%= form.label :role %>
+        <%= form.number_field :role, min: 0, max: 2 %>
+    </div>
+    <div>
+        <%= form.label :role2 %>
+        <%= form.number_field :role2, min: 0, max: 2 %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
